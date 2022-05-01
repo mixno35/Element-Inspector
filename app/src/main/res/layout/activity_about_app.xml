@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageApp"
+                android:layout_width="195dp"
+                android:layout_height="195dp"
+                android:cropToPadding="true"
+                android:src="@drawable/icon_ei_about"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textAppName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="28sp"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/title_remove"
+                        android:textStyle="bold"
+                        android:text="@string/action_about"
+                        android:gravity="left"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/ds_font_extrabold"
+                        app:layout_scrollFlags="scroll|enterAlwaysCollapsed"/>
+
+                </LinearLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="240dp"
+                    android:overScrollMode="ifContentScrolls">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginLeft="12dp">
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/rounded_about_app_bobble"
+                            android:gravity="center"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginLeft="12dp">
+
+                            <TextView
+                                android:id="@+id/textAppVersion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="0.0.0"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/title_remove"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_about_app_version"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/rounded_about_app_bobble"
+                            android:gravity="center"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginLeft="12dp">
+
+                            <TextView
+                                android:id="@+id/textAppVersionCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="0"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/title_remove"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_about_app_version_code"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/rounded_about_app_bobble"
+                            android:gravity="center"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginLeft="12dp">
+
+                            <TextView
+                                android:id="@+id/textAppLaunched"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="0"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/title_remove"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_about_app_launched"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="40dp"
+                    android:textSize="13sp"
+                    android:text="@string/message_app_description"
+                    android:textColor="@android:color/darker_gray"/>
+
+                <Button
+                    android:id="@+id/buttonSupportProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_support_project"
+                    android:backgroundTint="@color/colorAccent"
+                    app:backgroundTint="@color/colorAccent"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="12sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:visibility="visible"/>
+
+                <Button
+                    android:id="@+id/buttonSourceCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_source_code"
+                    android:backgroundTint="@color/colorAccent"
+                    app:backgroundTint="@color/colorAccent"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="12sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/buttonUnlockHideFunctions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_unlock_hide_functions"
+                    android:backgroundTint="@color/colorAccent"
+                    app:backgroundTint="@color/colorAccent"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="12sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp">
+
+                    <ImageView
+                        android:id="@+id/actionVK"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_vk"
+                        android:padding="8dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:tint="@color/linkImageAbout"/>
+
+                    <ImageView
+                        android:id="@+id/actionTELEGRAM"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_telegram"
+                        android:padding="8dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:tint="@color/linkImageAbout"/>
+
+                    <ImageView
+                        android:id="@+id/actionINSTAGRAM"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_instagram"
+                        android:padding="8dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:tint="@color/linkImageAbout"/>
+
+                    <ImageView
+                        android:id="@+id/actionYOUTUBE"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_youtube"
+                        android:padding="8dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:tint="@color/linkImageAbout"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/belarus"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/darker_gray"/>
+
+</RelativeLayout>

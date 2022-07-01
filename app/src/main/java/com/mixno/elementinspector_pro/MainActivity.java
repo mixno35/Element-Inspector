@@ -1398,7 +1398,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e) {}
             if (consoleList.size() > 0) {
                 consoleList.clear();
-                if (bottomSheetConsoleMain.getState() == 3) {
+                if (bottomSheetConsoleMain.getState() == BottomSheetBehavior.STATE_EXPANDED) {
                     consoleListFun(consoleList);
                 }
             }

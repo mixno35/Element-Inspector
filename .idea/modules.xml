@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ElementInspector.iml" filepath="$PROJECT_DIR$/ElementInspector.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ElementInspector.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ElementInspector.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ElementInspector.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ElementInspector.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ElementInspector.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ElementInspector.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ElementInspector.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ElementInspector.app.unitTest.iml" />
     </modules>
   </component>
 </project>

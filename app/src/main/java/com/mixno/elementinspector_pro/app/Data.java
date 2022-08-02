@@ -69,6 +69,7 @@ public class Data {
     public static String PATH_TABS = Environment.getExternalStorageDirectory().getPath() + File.separator + ".ei" + File.separator + ".tabs";
     public static String PATH_ADDONS = Environment.getExternalStorageDirectory().getPath() + File.separator + ".ei" + File.separator + ".addons";
     public static String PATH_FAVOURITES = Environment.getExternalStorageDirectory().getPath() + File.separator + ".ei" + File.separator + ".favourites";
+    public static String PATH_BACKUP = Environment.getExternalStorageDirectory().getPath() + File.separator + ".ei" + File.separator + ".backup";
 
     public static void openUrl(Context context, String url) throws Exception {
         context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
@@ -94,13 +95,15 @@ public class Data {
             createDirectory(PATH_TABS);
             createDirectory(PATH_HISTORY);
             createDirectory(PATH_ADDONS);
-            createDirectory(PATH_FAVOURITES);
+//            createDirectory(PATH_FAVOURITES);
+            createDirectory(PATH_BACKUP);
 
             Log.e("HOME PATH", PATH_HOME);
             Log.e("HISTORY PATH", PATH_HISTORY);
             Log.e("TABS PATH", PATH_TABS);
             Log.e("ADDONS PATH", PATH_ADDONS);
-            Log.e("FAVOURITES PATH", PATH_FAVOURITES);
+//            Log.e("FAVOURITES PATH", PATH_FAVOURITES);
+            Log.e("BACKUP PATH", PATH_BACKUP);
         } catch (Exception e) {
             Toast.makeText(context, "Error making app directories - " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }

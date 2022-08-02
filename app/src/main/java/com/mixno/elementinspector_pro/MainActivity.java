@@ -115,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
     public static ArrayList<ConsoleModel> consoleList = new ArrayList<>();
     public static ArrayList<BackHistoryModel> backHistoryList = new ArrayList<>();
 
+    public static ArrayList<String> consoleHistoryWrited = new ArrayList<>();
+
     private int consoleWARNING = 0;
     private int consoleERROR = 0;
     private int consoleLOG = 0;
@@ -459,12 +461,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mWeb.runJS(((EditText)findViewById(R.id.editMainJSContent)));
+                if (((EditText)findViewById(R.id.editMainJSContent)).length() < 120) {
+                    consoleHistoryWrited.add(((EditText)findViewById(R.id.editMainJSContent)).getText().toString().trim());
+                }
             }
         });
 
         ((Button)findViewById(R.id.buttonMainJSClear)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (!((EditText)findViewById(R.id.editMainJSContent)).getText().toString().trim().equals("")) {
+                    ((EditText)findViewById(R.id.editMainJSContent)).setText("");
+                    return;
+                }
                 if (consoleList.size() > 0) {
                     consoleList.clear();
                     consoleWARNING = 0;
@@ -888,6 +897,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        checkPermission();
     }
 
     @Override
@@ -971,7 +981,7 @@ public class MainActivity extends AppCompatActivity {
 //        } else {
 //            Data.createDefaultFolders(MainActivity.this);
 //        }
-        checkPermission();
+//        checkPermission();
     }
 
     @Override

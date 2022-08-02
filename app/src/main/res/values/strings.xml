@@ -20,7 +20,7 @@
     <string name="hint_error_search_engine_other_url_invalid">This field contains a strange link!</string>
 
     <string name="loading_page">Loading</string>
-    <string name="belarus">Elinther LP. 2020-2022</string>
+    <string name="belarus">Mikhno Dev. 2020-2022</string>
 
     <string name="action_console">Console</string>
     <string name="action_console_eruda">Console Eruda</string>
@@ -101,6 +101,7 @@
     <string name="action_unlock_hide_function_1">Unlocked</string>
     <string name="action_search">Search</string>
     <string name="action_useragent_new">Add other UserAgent</string>
+    <string name="action_request_send">Send</string>
 
     <string name="action_menu_open">Open</string>
     <string name="action_menu_copy">Copy</string>
@@ -207,9 +208,9 @@
     <string name="title_code">Code</string>
     <string name="title_code_style">Style</string>
     <string name="title_remove_all_tabs">Remove all tabs</string>
-    <string name="title_post">Post</string>
-    <string name="title_get">Get</string>
-    <string name="title_emulation_a_request">Emulation of a %1$s request</string>
+    <string name="title_post">POST</string>
+    <string name="title_get">GET</string>
+    <string name="title_emulation_a_request">Send %1$s request</string>
     <string name="title_app_debug">Debug</string>
     <string name="title_steep_poll">Step poll</string>
     <string name="title_confirm_action">Confirm action</string>

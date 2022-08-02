@@ -20,7 +20,7 @@
     <string name="hint_error_search_engine_other_url_invalid">Это поле содержит странную ссылку!</string>
 
     <string name="loading_page">Загрузка</string>
-    <string name="belarus">Elinther LP. 2020-2022</string>
+    <string name="belarus">Mikhno Dev. 2020-2022</string>
 
     <string name="action_console">Консоль</string>
     <string name="action_console_eruda">Консоль Eruda</string>
@@ -101,6 +101,7 @@
     <string name="action_unlock_hide_function_1">Раблокировано</string>
     <string name="action_search">Поиск</string>
     <string name="action_useragent_new">Добавить свой UserAgent</string>
+    <string name="action_request_send">Выполнить</string>
 
     <string name="action_menu_open">Открыть</string>
     <string name="action_menu_copy">Копировать</string>
@@ -207,9 +208,9 @@
     <string name="title_code">Код</string>
     <string name="title_code_style">Стили</string>
     <string name="title_remove_all_tabs">Удалить все вкладки</string>
-    <string name="title_post">Post</string>
-    <string name="title_get">Get</string>
-    <string name="title_emulation_a_request">Эмуляция %1$s запроса</string>
+    <string name="title_post">POST</string>
+    <string name="title_get">GET</string>
+    <string name="title_emulation_a_request">Выполнить %1$s запрос</string>
     <string name="title_app_debug">Debug</string>
     <string name="title_steep_poll">Пройти опрос</string>
     <string name="title_confirm_action">Подтвердите действие</string>

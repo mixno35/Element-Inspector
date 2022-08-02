@@ -2,6 +2,7 @@ package com.mixno.elementinspector_pro.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,13 +45,7 @@ public class WebEIConsoleAdapter extends RecyclerView.Adapter<WebEIConsoleAdapte
         holder.textSourceID.post(new Runnable() {
             @Override
             public void run() {
-                holder.textSourceID.setText(model.getSourceID());
-            }
-        });
-        holder.textLinNumber.post(new Runnable() {
-            @Override
-            public void run() {
-                holder.textLinNumber.setText(String.valueOf(model.getLineNumber()));
+                holder.textSourceID.setText(model.getSourceID() + " :" + String.valueOf(model.getLineNumber()) + " line");
             }
         });
         holder.textUP.post(new Runnable() {
@@ -76,46 +71,60 @@ public class WebEIConsoleAdapter extends RecyclerView.Adapter<WebEIConsoleAdapte
                 }
             });
         }
-//        if (model.getType() == "error") {
-//            ((Activity)context).runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    holder.linMessage.setBackgroundColor(context.getResources().getColor(R.color.consoleErrorBack));
-//                    holder.imageType.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            holder.imageType.setImageResource(R.drawable.ic_console_error);
-//                        }
-//                    });
-//                    holder.textMessage.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            holder.textMessage.setTextColor(context.getResources().getColor(R.color.consoleError));
-//                        }
-//                    });
-//                }
-//            });
-//        }
-//        if (model.getType() == "warning") {
-//            ((Activity)context).runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    holder.linMessage.setBackgroundColor(context.getResources().getColor(R.color.consoleWarningBack));
-//                    holder.imageType.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            holder.imageType.setImageResource(R.drawable.ic_console_warning);
-//                        }
-//                    });
-//                    holder.textMessage.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            holder.textMessage.setTextColor(context.getResources().getColor(R.color.consoleWarning));
-//                        }
-//                    });
-//                }
-//            });
-//        }
+        if (model.getType().equals("ERROR")) {
+            ((Activity)context).runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    holder.linMessage.setBackgroundColor(context.getResources().getColor(R.color.consoleErrorBack));
+                    holder.imageType.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            holder.imageType.setImageResource(R.drawable.ic_baseline_cancel_24);
+                            holder.imageType.setColorFilter(context.getResources().getColor(R.color.consoleError), PorterDuff.Mode.SRC_IN);
+                        }
+                    });
+                    holder.textMessage.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            holder.textMessage.setTextColor(context.getResources().getColor(R.color.consoleError));
+                        }
+                    });
+                    holder.textUP.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            holder.textUP.setTextColor(context.getResources().getColor(R.color.consoleError));
+                        }
+                    });
+                }
+            });
+        }
+        if (model.getType().equals("WARNING")) {
+            ((Activity)context).runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    holder.linMessage.setBackgroundColor(context.getResources().getColor(R.color.consoleWarningBack));
+                    holder.imageType.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            holder.imageType.setImageResource(R.drawable.ic_baseline_warning_24);
+                            holder.imageType.setColorFilter(context.getResources().getColor(R.color.consoleWarning), PorterDuff.Mode.SRC_IN);
+                        }
+                    });
+                    holder.textMessage.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            holder.textMessage.setTextColor(context.getResources().getColor(R.color.consoleWarning));
+                        }
+                    });
+                    holder.textUP.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            holder.textUP.setTextColor(context.getResources().getColor(R.color.consoleWarning));
+                        }
+                    });
+                }
+            });
+        }
     }
 
     @Override
@@ -128,8 +137,6 @@ public class WebEIConsoleAdapter extends RecyclerView.Adapter<WebEIConsoleAdapte
         protected LinearLayout linMessage;
         protected TextView textSourceID;
         protected LinearLayout linSourceID;
-        protected TextView textLinNumber;
-        protected LinearLayout linLinNumber;
         protected ImageView imageType;
         protected TextView textUP;
 
@@ -139,9 +146,7 @@ public class WebEIConsoleAdapter extends RecyclerView.Adapter<WebEIConsoleAdapte
             linMessage = item.findViewById(R.id.linMessage);
             textSourceID = item.findViewById(R.id.textSourceID);
             linSourceID = item.findViewById(R.id.linSourceID);
-            textLinNumber = item.findViewById(R.id.textLinNumber);
             imageType = item.findViewById(R.id.imageType);
-            linLinNumber = item.findViewById(R.id.linLinNumber);
             textUP = item.findViewById(R.id.textUP);
         }
     }

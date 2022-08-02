@@ -13,6 +13,7 @@ public class ConsoleModel {
         this.lineNumber = lineNumber;
         this.sourceID = sourceID;
         this.time = time;
+        this.type = type;
     }
 
     public String getMessage() {
